@@ -1,0 +1,31 @@
+<html>
+<head>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        tr.heading {
+            font-weight: bolder;
+        }
+        td {
+            border: 1px solid black;
+            padding: 0 0.5em;
+        }
+    </style>
+</head>
+<body>
+<h2>Добавленные изображения по убыванию количества просмотров:</h2>
+<table>
+    {% for d in data %}
+        <tr>
+            <td>
+            <a href = "image.php?id={{ d.id|escape }}">
+                <img width="50" border="1" src = "i/min/{{ d.name|escape }}">
+            </a>
+                {{ d.name|escape }}
+            </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

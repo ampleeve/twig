@@ -1,0 +1,24 @@
+<html>
+<head>
+    <style type="text/css">
+        table {
+            border-collapse: collapse;
+        }
+        tr.heading {
+            font-weight: bolder;
+        }
+        td {
+            border: 1px solid black;
+            padding: 0 0.5em;
+        }
+    </style>
+</head>
+<body>
+<h1>{{ title|escape }}</h1>
+<div>
+    <p>Популярность: {{ popularity|escape }}</p>
+    <a href="/">Назад</a><br>
+    <img title="{{ title|escape }}" alt="{{ alt|escape }}" src="i/full/{{ name|escape }}">
+</div>
+</body>
+</html>
